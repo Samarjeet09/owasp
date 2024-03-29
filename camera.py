@@ -5,7 +5,7 @@ import boto3
 import io
 from PIL import Image
 
-save_folder = "image_captured"
+save_folder = "image_captured_camera"
 
 # Initialize AWS clients
 rekognition = boto3.client('rekognition', region_name='us-east-1')
