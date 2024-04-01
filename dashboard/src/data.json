@@ -1,0 +1,45 @@
+[
+    {
+      "name": "Page A",
+      "heart_rate": 4000,
+      "blood_pressure": 2400,
+      "amt": 2400
+    },
+    {
+      "name": "Page B",
+      "heart_rate": 3000,
+      "blood_pressure": 1398,
+      "amt": 2210
+    },
+    {
+      "name": "Page C",
+      "heart_rate": 2000,
+      "blood_pressure": 9800,
+      "amt": 2290
+    },
+    {
+      "name": "Page D",
+      "heart_rate": 2780,
+      "blood_pressure": 3908,
+      "amt": 2000
+    },
+    {
+      "name": "Page E",
+      "heart_rate": 1890,
+      "blood_pressure": 4800,
+      "amt": 2181
+    },
+    {
+      "name": "Page F",
+      "heart_rate": 2390,
+      "blood_pressure": 3800,
+      "amt": 2500
+    },
+    {
+      "name": "Page G",
+      "heart_rate": 3490,
+      "blood_pressure": 4300,
+      "amt": 2100
+    }
+  ]
+  
