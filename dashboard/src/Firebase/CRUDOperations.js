@@ -60,7 +60,6 @@ export function addUserDetails(id, information) {
         DocRef = doc(db, 'BloodPressure', String(id));
         oldData = (await getDoc(DocRef)).data();
         oldData[currentDate] = {
-            ...oldData[currentDate],
             'Systolic': information['BloodPressure']['value']['systolic'],
             'Diastolic': information['BloodPressure']['value']['diastolic'],
         };
@@ -71,7 +70,7 @@ export function addUserDetails(id, information) {
         oldData = (await getDoc(DocRef)).data();
 
         oldData[currentDate] = {
-            ...oldData[currentDate],
+            // ...oldData[currentDate],
             'HeartRate': information['HeartRate']['value']
         };
         batch.set(DocRef, oldData);
@@ -81,7 +80,7 @@ export function addUserDetails(id, information) {
         oldData = (await getDoc(DocRef)).data();
 
         oldData[currentDate] = {
-            ...oldData[currentDate],
+            // ...oldData[currentDate],
             'Breakfast': information['Calories']['value']['Breakfast'],
             'Lunch': information['Calories']['value']['Lunch'],
             'Dinner': information['Calories']['value']['Dinner'],
@@ -93,7 +92,7 @@ export function addUserDetails(id, information) {
         oldData = (await getDoc(DocRef)).data();
 
         oldData[currentDate] = {
-            ...oldData[currentDate],
+            // ...oldData[currentDate],
             'Happy': information['Mood']['value']['Happy'],
             'Energetic': information['Mood']['value']['Energetic'],
             'Anxiety': information['Mood']['value']['Anxiety'],
@@ -105,7 +104,7 @@ export function addUserDetails(id, information) {
         oldData = (await getDoc(DocRef)).data();
 
         oldData[currentDate] = {
-            ...oldData[currentDate],
+            // ...oldData[currentDate],
             'sleep': information['Sleep']['value'],
         };
         batch.set(DocRef, oldData);
@@ -115,7 +114,7 @@ export function addUserDetails(id, information) {
         oldData = (await getDoc(DocRef)).data();
 
         oldData[currentDate] = {
-            ...oldData[currentDate],
+            // ...oldData[currentDate],
             'water': information['Water']['value'],
         };
         batch.set(DocRef, oldData);

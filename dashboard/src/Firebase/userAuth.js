@@ -8,7 +8,7 @@ export function signUp(userInfo) {
         createUserWithEmailAndPassword(auth, userInfo['email'], userInfo['password'])
             .then((userCredential) => {
                 addUser(userInfo)
-                    .then((ref) => resolve(userCredential.user))
+                    .then((ref) => resolve(userInfo))
                     .catch((err) => reject("couldn't make the document"))
             })
             .catch((error) => {

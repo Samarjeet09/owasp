@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill } from 'react-icons/bs'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, AreaChart, Area } from 'recharts';
 import { getDetails } from './Firebase/CRUDOperations';
 import { formatBloodPressure, formatCalorie, formatHeartRate, formatMood, formatSleep, formatWater } from './Firebase/formatResponse';
-
+import userContext from './context/users/userContext';
 
 function Home() {
     const [BloodPressure, setBloodPressure] = useState();
@@ -12,6 +12,16 @@ function Home() {
     const [Sleep, setSleep] = useState();
     const [Mood, setMood] = useState();
     const [Water, setWater] = useState();
+
+    const { user, login } = useContext(userContext);
+
+    const tempUser = {
+        'name': 'Mukul',
+        'role': 'patient',
+        'email': 'mjindal_be21@thapar.edu',
+        'password': 'mukul1234',
+        'id': 102116063,
+    }
 
     async function initialData() {
         let id = 102116063;
@@ -30,7 +40,8 @@ function Home() {
     }
     useEffect(() => {
         initialData();
-    },[])
+        login(tempUser);
+    }, [])
     return (
         <main className='main-container'>
             <div className='main-title'>
