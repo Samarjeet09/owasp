@@ -31,20 +31,20 @@ function Home() {
                 </div>
                 <h1>7</h1>
             </div>
-            <div className='card'>
+            {/* <div className='card'>
                 <div className='card-inner'>
                     <h3>CATEGORIES</h3>
                     <BsFillGrid3X3GapFill className='card_icon'/>
                 </div>
                 <h1>12</h1>
-            </div>
-            <div className='card'>
+            </div> */}
+            {/* <div className='card'>
                 <div className='card-inner'>
                     <h3>CUSTOMERS</h3>
                     <BsPeopleFill className='card_icon'/>
                 </div>
                 <h1>33</h1>
-            </div>
+            </div> */}
             <div className='card'>
                 <div className='card-inner'>
                     <h3>INBOX</h3>
@@ -67,7 +67,7 @@ function Home() {
                 bottom: 5,
             }}
             >
-                <CartesianGrid strokeDasharray="3 3" />
+                {/* <CartesianGrid strokeDasharray="3 3" /> */}
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
@@ -89,7 +89,7 @@ function Home() {
                     bottom: 5,
                 }}
                 >
-                <CartesianGrid strokeDasharray="3 3" />
+                {/* <CartesianGrid strokeDasharray="3 3" /> */}
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
@@ -113,14 +113,14 @@ function Home() {
                 bottom: 5,
             }}
             >
-                <CartesianGrid strokeDasharray="3 3" />
+                {/* <CartesianGrid strokeDasharray="3 3" /> */}
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
                 <Legend />
                 <Bar dataKey="Breakfast" stackId="a" fill="#8884d8" />
                 <Bar dataKey="Lunch" stackId="a" fill="#82ca9d" />
-                <Bar dataKey="Dinner" stackId="a" fill="#ffffff" />
+                <Bar dataKey="Dinner" stackId="a" fill="#FFFF00" />
 
               {/*  <Bar dataKey="water" fill="#82ca9d" /> */}
                 </BarChart>
@@ -138,7 +138,7 @@ function Home() {
                     bottom: 5,
                 }}
                 >
-                <CartesianGrid strokeDasharray="3 3" />
+                {/* <CartesianGrid strokeDasharray="3 3" /> */}
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />
@@ -163,7 +163,7 @@ function Home() {
                 bottom: 5,
             }}
             >
-                <CartesianGrid strokeDasharray="3 3" />
+                {/* <CartesianGrid strokeDasharray="3 3" /> */}
                 <XAxis type="number" />
                 <YAxis dataKey="name" type="category" />
                 <Tooltip />
@@ -188,7 +188,7 @@ function Home() {
                     bottom: 5,
                 }}
                 >
-                <CartesianGrid strokeDasharray="3 3" />
+                {/* <CartesianGrid strokeDasharray="3 3" /> */}
                 <XAxis dataKey="name" />
                 <YAxis />
                 <Tooltip />

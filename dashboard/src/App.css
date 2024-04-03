@@ -130,7 +130,7 @@ body {
 
 .main-cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 20px;
   margin: 15px 0;
 }
@@ -141,14 +141,15 @@ body {
   justify-content: space-around;
   padding: 8px 15px;
   border-radius: 5px;
+  
 }
 
 .card:first-child {
-  background-color: #2962ff;
+  background-color: #2e7d32;
 }
 
 .card:nth-child(2) {
-  background-color: #ff6d00;
+  background-color: #d50000;
 }
 
 .card:nth-child(3) {
