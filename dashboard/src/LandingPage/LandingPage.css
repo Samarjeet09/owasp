@@ -1,0 +1,9 @@
+.landingPageBackground {
+    background-color: white;
+}
+
+#landingPageNavbar {
+    display: flex;
+    flex-direction: row;
+    padding: 5px 5px;
+}
