@@ -1,8 +1,16 @@
 import { useState } from 'react'
-import './App.css'
-import Header from './Header'
-import Sidebar from './Sidebar'
-import Home from './Home'
+
+// import Header from './Header'
+// import Sidebar from './Sidebar'
+import Dashboard from './Dashboard/Dashboard'
+import UserState from './context/users/userState'
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import AddUserDetails from './AddUserDetails'
+import LandingPage from './LandingPage/LandingPage'
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
@@ -12,11 +20,19 @@ function App() {
   }
 
   return (
-    <div className='grid-container'>
-      <Header OpenSidebar={OpenSidebar}/>
-      <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar}/>
-      <Home />
-    </div>
+    <UserState>
+      <Router>
+        <div className='container'>
+          {/* <Header OpenSidebar={OpenSidebar} />
+          <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} /> */}
+          <Routes>
+            <Route path='/' element={<LandingPage />}> </Route>
+            <Route path='/dashborad' element={<Dashboard />}> </Route>
+            <Route path='/addReport' element={<AddUserDetails />}></Route>
+          </Routes>
+        </div>
+      </Router>
+    </UserState>
   )
 }
 

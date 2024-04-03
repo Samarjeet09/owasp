@@ -1,39 +1,44 @@
-import React from 'react'
-import 
-{BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, 
-  BsListCheck, BsMenuButtonWideFill, BsFillGearFill}
- from 'react-icons/bs'
+import React, { useContext } from 'react'
+import { BsCart3, BsGrid1X2Fill, BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsClipboard2PulseFill } from 'react-icons/bs'
+import userContext from './context/users/userContext'
+import { Link} from 'react-router-dom';
+function Sidebar({ openSidebarToggle, OpenSidebar }) {
 
-function Sidebar({openSidebarToggle, OpenSidebar}) {
-  return (
-    <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive": ""}>
-        <div className='sidebar-title'>
-            <div className='sidebar-brand'>
-                <BsCart3  className='icon_header'/> Patient Id:23102
+    const { user } = useContext(userContext);
+    return (
+        <aside id="sidebar" className={openSidebarToggle ? "sidebar-responsive" : ""}>
+            <div className='sidebar-title'>
+                <div className='sidebar-brand'>
+                    <BsCart3 className='icon_header' /> Patient Id:{user['id']}
+                </div>
+                <span className='icon close_icon' onClick={OpenSidebar}>X</span>
             </div>
-            <span className='icon close_icon' onClick={OpenSidebar}>X</span>
-        </div>
 
-        <ul className='sidebar-list'>
-            <li className='sidebar-list-item'>
-                <a href="">
-                    <BsGrid1X2Fill className='icon'/> Home
-                </a>
+            <ul className='sidebar-list'>
+                <li className='sidebar-list-item'>
+                    <Link to="/">
+                    <BsGrid1X2Fill className='icon' /> Home
+                </Link>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
-                    <BsFillArchiveFill className='icon'/> Caretaker Contact
-                </a>
+                <Link to="/">
+                    <BsFillArchiveFill className='icon' /> Caretaker Contact
+                </Link>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
-                    <BsFillGrid3X3GapFill className='icon'/> Contact Us
-                </a>
+                <Link to="/">
+                    <BsFillGrid3X3GapFill className='icon' /> Contact Us
+                </Link>
             </li>
             <li className='sidebar-list-item'>
-                <a href="">
-                    <BsPeopleFill className='icon'/> Inbox
-                </a>
+                <Link to="/">
+                    <BsPeopleFill className='icon' /> Inbox
+                </Link>
+            </li>
+            <li className='sidebar-list-item'>
+                <Link to="/addReport">
+                    <BsClipboard2PulseFill className='icon' /> Add Report
+                </Link>
             </li>
             {/* <li className='sidebar-list-item'>
                 <a href="">
@@ -51,8 +56,8 @@ function Sidebar({openSidebarToggle, OpenSidebar}) {
                 </a>
             </li> */}
         </ul>
-    </aside>
-  )
+        </aside >
+    )
 }
 
 export default Sidebar
