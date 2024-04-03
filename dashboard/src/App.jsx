@@ -11,6 +11,7 @@ import {
 } from "react-router-dom";
 import AddUserDetails from './AddUserDetails'
 import LandingPage from './LandingPage/LandingPage'
+import Admin from './Admin/Admin'
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
@@ -27,8 +28,9 @@ function App() {
           <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} /> */}
           <Routes>
             <Route path='/' element={<LandingPage />}> </Route>
-            <Route path='/dashborad' element={<Dashboard />}> </Route>
+            <Route path='/dashboard' element={<Dashboard />}> </Route>
             <Route path='/addReport' element={<AddUserDetails />}></Route>
+            <Route path='/admin' element={<Admin />}></Route>
           </Routes>
         </div>
       </Router>
