@@ -46,22 +46,22 @@ export default function AppointmentPage() {
                 <img src="src/assets/logo.png" alt="" />
                 <span>NirogSampada</span>
             </div> 
-            <div className='generalInfo'>
-                <div className='generalInfoLeft'>
-                    <h1 className='heading'>
+            <div className='generalInfo1'>
+                <div className='generalInfoLeft1'>
+                    <h1 className='heading1'>
                         Book Your Appointment Now!
                     </h1>
-                    <span className='paragraph'>
+                    <span className='paragraph1'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facilis cumque beatae. Odit labore dolor ab recusandae! Repudiandae libero tempore, rerum laudantium eveniet consequatur hic itaque, animi maiores, expedita vitae.
                     </span>
-                    <div className='fill'>
+                    <div className='fill1'>
                         Book Now!
                     </div>
                 </div>
-                <div className='generalInfoRight'>
-                    <div className='characters'>
-                        <span className='character1'>
-                            <div className='character2'>
+                <div className='generalInfoRight1'>
+                    <div className='characters1'>
+                        <span className='characters1'>
+                            <div className='characters2'>
 
                             </div>
                         </span>
@@ -71,7 +71,7 @@ export default function AppointmentPage() {
 
             </div>
             <div className='rehabForm'>
-                <h1 className='heading'>
+                <h1 className='heading3'>
                     Rehab Name
                     
                 </h1>

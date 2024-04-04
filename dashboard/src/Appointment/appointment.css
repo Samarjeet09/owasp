@@ -16,11 +16,11 @@
     margin-left: 50%;
 }
 
-.generalInfo{
+.generalInfo1{
     display: flex;
     flex-direction: row;
 }
-.generalInfoLeft{
+.generalInfoLeft1{
     width: 40vw;
     height: 50vh;
     display: flex;
@@ -30,18 +30,18 @@
     align-items: center;
 }
 
-.generalInfoLeft .heading{
+.generalInfoLeft1 .heading1{
     font-size: 50px;
     font-weight: bold;
     width: 70%;
     margin: 0px auto;
     color: black;
 }
-.generalInfoLeft .paragraph{
+.generalInfoLeft1 .paragraph1{
     width: 70%;
     margin: 0px auto;
 }
-.generalInfoRight{
+.generalInfoRight1{
     width: 60vw;
     height: 100vh;
     background-image: url('src/assets/Appointment/Vector.png');
@@ -49,7 +49,7 @@
     background-size: contain;
     background-position: right;
 }
-.characters{
+.characters1{
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -57,7 +57,7 @@
     align-items: flex-end;
     justify-content: flex-end;
 }
-.characters .character1{
+.characters1 .characters1{
     background-image: url('src/assets/appointment/Laptop.png');
     background-position: center center ;
     background-size: fit;
@@ -68,7 +68,7 @@
     background-color: transparent;
     position: relative;
 }
-.characters .character1 .character2{
+.characters1 .characters1 .characters2{
     background-image: url('src/assets/appointment/Calendar.png');
     background-position: center right;
     background-size: fit;
@@ -80,7 +80,7 @@
     position: relative;
 }
 
-.rehabForm .heading{
+.rehabForm .heading3{
     font-size: 40px;
     font-weight: bold;
     width: 70%;
