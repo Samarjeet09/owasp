@@ -1,4 +1,4 @@
-import { setDoc, doc, updateDoc, getDoc, writeBatch } from "firebase/firestore";
+import { setDoc, doc, updateDoc, getDoc, writeBatch, addDoc, collection, getDocs, query, where } from "firebase/firestore";
 import { db } from "./initiate.js";
 
 export default function addUser(userInfo) {
@@ -131,5 +131,37 @@ export function getDetails(id, type) {
         getDoc(doc(db, type, String(id)))
             .then((information) => resolve(information.data()))
             .catch((err) => reject(err))
+    })
+}
+
+export function addAppointment(information) {
+    return new Promise((resolve, reject) => {
+        addDoc(collection(db, 'Appointments'), {
+            'firstName ': information['firstName'],
+            'lastName': information['lastName'],
+            'email': information['email'],
+            'mobile': information['mobile'],
+            'DOB': information['DOB'],
+            'gender': information['gender'],
+            'appointmentDate': information['appointmentDate'],
+            'problem': information['problem'],
+            'status': "pending"
+        })
+            .then((message) => resolve(message))
+            .catch((error) => reject(error));
+    })
+}
+
+export function getAppointment() {
+    return new Promise((resolve, reject) => {
+        getDocs(query(collection(db, 'Appointments'), where('status', '==', 'pending')))
+            .then((snapshot) => {
+                let data = [];
+                snapshot.forEach((doc) => {
+                    data.push(doc.data());
+                })
+                resolve(data);
+            })
+            .catch(error => reject(error));
     })
 }
