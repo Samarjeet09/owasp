@@ -13,6 +13,8 @@ import AddUserDetails from './AddUserDetails/AddUserDetails'
 import LandingPage from './LandingPage/LandingPage'
 import Admin from './Admin/Admin'
 import Navbar from './Navbar/Navbar'
+import Caretaker from './Caretaker/Caretaker';
+import Guardian from './Guardian/Guardian';
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
@@ -33,6 +35,8 @@ function App() {
             <Route path='/dashboard' element={<Dashboard />}> </Route>
             <Route path='/addReport' element={<AddUserDetails />}></Route>
             <Route path='/admin' element={<Admin />}></Route>
+            <Route path='/caretaker' element={<Caretaker />}></Route>
+            <Route path='/guardian' element={<Guardian />}></Route>
           </Routes>
         </div>
       </Router>
