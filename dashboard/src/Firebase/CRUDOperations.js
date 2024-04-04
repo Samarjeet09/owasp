@@ -148,7 +148,7 @@ export function addAppointment(information) {
             'status': "pending"
         })
             .then((message) => resolve(message))
-            .catch((error) => resolve(error));
+            .catch((error) => reject(error));
     })
 }
 
