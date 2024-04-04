@@ -22,7 +22,7 @@
 }
 
 .generalInfoLeft {
-    width: 50vw;
+    width: 40vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -42,15 +42,35 @@
 .generalInfoLeft .paragraph {
     width: 70%;
     margin: 0px auto;
+}
 
+.authOptions {
+    display: flex;
+    flex-direction: column;
+    height: 20%;
+    width: 50%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.authOptions .authButton {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6vw;
+    background-image: linear-gradient(to right, #9955a7, #801e8d);
+    color: white;
+    height: 30%;
 }
 
 .generalInfoRight {
-    width: 50vw;
+    width: 60vw;
     height: 100vh;
-    background-image: url('src/assets/LandingPage/Vector.png');
+    background-image: url(src/assets/LandingPage/Vector.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: right;
 }
 
 .characters {
@@ -59,7 +79,7 @@
     height: 100%;
     background-color: transparent;
     align-items: flex-end;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
 .characters .character1 {
@@ -80,5 +100,57 @@
     width: 40%;
     z-index: 2;
     background-color: transparent;
+}
 
+.whoWeAre {
+    width: 100vw;
+    height: 65vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.whoWeAre .leftBlock {
+    width: 40%;
+    height: 100%;
+    background-image: url('src/assets/LandingPage/Vaccination_research.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.whoWeAre .rightBlock {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.whoWeAre .rightBlock .moreInfoBtn {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.6vw;
+    background-image: linear-gradient(to right, #9955a7, #801e8d);
+    color: white;
+    height: 10%;
+}
+
+.slideCardBox {
+    height: 50vh;
+    width: 90vw;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.slideCard {
+    height: 100%;
+    width: 100%;
+    margin: auto auto;
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
 }
