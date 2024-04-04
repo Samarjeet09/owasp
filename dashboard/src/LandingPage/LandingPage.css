@@ -155,3 +155,15 @@
     overflow-y: hidden;
     white-space: nowrap;
 }
+
+.map {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 60px;
+
+    & iframe {
+        width: 100%;
+        border: 0;
+        border-radius: 25px;
+    }
+}

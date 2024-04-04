@@ -69,7 +69,10 @@ export default function LandingPage() {
                     {<SlideCardComponent image='src/assets/LandingPage/doctorPatient.png' text="addiction" />}
                 </div>
             </div>
-            {<Footer/>}
+            <div className="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5720.110144094836!2d77.0971928757429!3d28.48671142217681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1ffa168b5a55%3A0x818faf70358dc1c7!2sRoar%20Wellness%20De%20Addiction%20Centre!5e0!3m2!1sen!2sin!4v1712252124618!5m2!1sen!2sin" width="600" height="450" loading="lazy" allowFullScreen referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            {<Footer />}
         </div>
     )
 }
