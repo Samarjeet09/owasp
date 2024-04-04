@@ -47,14 +47,18 @@ export default function Footer() {
                     <h3>Contact</h3>
                     <div className="contactBox">
                         <div className="icons">
-                            <BsFillTelephoneFill />
-                            <FiMail />
-                            <FaLocationArrow />
-                        </div>
-                        <div className="information">
-                            <span>+91 70875-70875</span>
-                            <span>rsampadacontactus@gmail.com</span>
-                            <span>EveryWhere</span>
+                            <div className="information">
+                                <BsFillTelephoneFill size={20} />
+                                +91 70875-70875
+                            </div>
+                            <div className="information">
+                                <FiMail size={20} />
+                                rsampadacontactus@gmail.com
+                            </div>
+                            <div className="information">
+                                <FaLocationArrow size={20} />
+                                EveryWhere
+                            </div>
                         </div>
                     </div>
                 </div>

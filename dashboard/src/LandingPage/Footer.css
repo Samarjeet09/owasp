@@ -11,8 +11,8 @@
     flex-direction: row;
     margin: 0px auto;
     margin-top: 50px;
-    width: 80%;
-    height: 40vh;
+    width: 90%;
+    height: 25vh;
     justify-content: space-between;
     align-items: flex-start;
 
@@ -38,10 +38,13 @@
     }
 
     & .hours {
+        width: 13%;
+
         & .timeTable {
             display: flex;
             flex-direction: row;
             color: grey;
+            justify-content: space-between;
 
             & .days {
                 display: flex;
@@ -56,6 +59,8 @@
     }
 
     & .contact {
+        width: 17%;
+
         & .contactBox {
             display: flex;
             flex-direction: row;
@@ -63,6 +68,11 @@
             & .icons {
                 display: flex;
                 flex-direction: column;
+
+                & .information {
+                    display: flex;
+                    flex-direction: row;
+                }
             }
 
             & .information {
