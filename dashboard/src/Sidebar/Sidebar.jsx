@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaTimes } from 'react-icons/fa';
 import './Sidebar.css';
+import { Link } from 'react-router-dom';
 
 const Sidebar = ({ isOpen, toggle }) => {
   return (
@@ -10,9 +11,9 @@ const Sidebar = ({ isOpen, toggle }) => {
         <button onClick={toggle}><FaTimes /></button>
       </div>
       <ul className="sidebar-menu">
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Reports</a></li>
-        <li><a href="#">Inbox</a></li>
+        <li><Link to="/dashboard">Dashboard</Link></li>
+        <li><Link to="/reports">Reports</Link></li>
+        <li><Link to="/inbox">Inbox</Link></li>
       </ul>
     </div>
   );

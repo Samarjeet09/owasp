@@ -9,9 +9,10 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-import AddUserDetails from './AddUserDetails'
+import AddUserDetails from './AddUserDetails/AddUserDetails'
 import LandingPage from './LandingPage/LandingPage'
 import Admin from './Admin/Admin'
+import Navbar from './Navbar/Navbar'
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
@@ -27,6 +28,7 @@ function App() {
           {/* <Header OpenSidebar={OpenSidebar} />
           <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} /> */}
           <Routes>
+            <Route path='/reports' element={<AddUserDetails/>}></Route>
             <Route path='/' element={<LandingPage />}> </Route>
             <Route path='/dashboard' element={<Dashboard />}> </Route>
             <Route path='/addReport' element={<AddUserDetails />}></Route>
