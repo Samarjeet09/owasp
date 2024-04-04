@@ -3,6 +3,7 @@ import { useState } from 'react'
 // import Header from './Header'
 // import Sidebar from './Sidebar'
 import Dashboard from './Dashboard/Dashboard'
+import AppointmentPage from './Appointment/appointment';
 import UserState from './context/users/userState'
 import {
   BrowserRouter as Router,
@@ -34,9 +35,13 @@ function App() {
             <Route path='/' element={<LandingPage />}> </Route>
             <Route path='/dashboard' element={<Dashboard />}> </Route>
             <Route path='/addReport' element={<AddUserDetails />}></Route>
+
+            <Route path='/appointment' element={<AppointmentPage/>}></Route>
+
             <Route path='/admin' element={<Admin />}></Route>
             <Route path='/caretaker' element={<Caretaker />}></Route>
             <Route path='/guardian' element={<Guardian />}></Route>
+
           </Routes>
         </div>
       </Router>
