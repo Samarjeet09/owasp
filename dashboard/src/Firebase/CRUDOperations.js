@@ -144,8 +144,6 @@ export function addAppointment(information) {
             'DOB': information['DOB'],
             'gender': information['gender'],
             'appointmentDate': information['appointmentDate'],
-            'departmentName': information['departmentName'],
-            'doctorName': information['doctorName'],
             'problem': information['problem'],
             'status': "pending"
         })
