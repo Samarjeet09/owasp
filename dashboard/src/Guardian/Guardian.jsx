@@ -5,7 +5,7 @@ import { MdPerson } from 'react-icons/md'
 import './Guardian.css';
 import Box from '../Box/Box.jsx';
 import { FaUser } from 'react-icons/fa';
-import DataBox from '../DataBox/DataBox.jsx';
+import DataBox from '../DataBox/AppointmentDataBox.jsx';
 
 
 

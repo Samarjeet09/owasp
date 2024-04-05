@@ -44,8 +44,7 @@ export default function AddUserDetails() {
         e.preventDefault();
         console.log(userReport);
         console.log(user);
-        // addUserDetails(user['id'], userReport)
-        addUserDetails('10211063', userReport)
+        addUserDetails(user['id'], userReport)
             .then((data) => {
                 console.log("Added Successfully");
                 navigate("/");

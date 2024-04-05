@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-// import './App.css'
+import './Dashborad.css'
 import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill } from 'react-icons/bs'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, AreaChart, Area } from 'recharts';
 import { getDetails } from '../Firebase/CRUDOperations';
@@ -17,16 +17,8 @@ function Dashboard() {
 
     const { user, login } = useContext(userContext);
 
-    const tempUser = {
-        'name': 'Mukul',
-        'role': 'patient',
-        'email': 'mjindal_be21@thapar.edu',
-        'password': 'mukul1234',
-        'id': 102116063,
-    }
-
     async function initialData() {
-        let id = 102116063;
+        let id = user['id'];
         await getDetails(id, 'BloodPressure')
             .then((data) => { setBloodPressure(formatBloodPressure(data)) });
         await getDetails(id, 'HeartRate')
@@ -42,7 +34,6 @@ function Dashboard() {
     }
     useEffect(() => {
         initialData();
-        login(tempUser);
     }, [])
     return (
         <main className='main-container'>

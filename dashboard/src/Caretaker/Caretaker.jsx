@@ -5,7 +5,8 @@ import { MdPerson } from 'react-icons/md'
 import './Caretaker.css';
 import Box from '../Box/Box.jsx';
 import { FaUser } from 'react-icons/fa';
-import DataBox from '../DataBox/DataBox.jsx';
+import AppointmentDataBox from '../DataBox/AppointmentDataBox.jsx';
+import PatientsDataBox from '../DataBox/PatientsDataBox.jsx';
 
 const Caretaker = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,8 +46,9 @@ const Caretaker = () => {
         <div className='box'><Box /></div>
 
         <div className='databox'>
-          <DataBox name={'Patients'} />
-          <DataBox name={'Appointments'} />
+          <PatientsDataBox name={'Patients'} />
+          <AppointmentDataBox name={'Appointments'} />
+
         </div>
 
       </div>
