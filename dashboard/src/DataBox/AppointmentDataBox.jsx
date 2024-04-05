@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import './DataBox.css'
+import './AppointmentDataBox.css'
 import { getAppointment } from '../Firebase/CRUDOperations'
 
-const DataBox = ({ name }) => {
+const AppointmentDataBox = ({ name }) => {
 
   const [patientData, setPatientData] = useState([]);
 
@@ -54,4 +54,4 @@ const DataBox = ({ name }) => {
   )
 }
 
-export default DataBox
+export default AppointmentDataBox

@@ -168,3 +168,18 @@ export function getAppointment() {
             .catch(error => reject(error));
     })
 }
+
+export function getAllPatients() {
+    return new Promise((resolve, reject) => {
+        getDocs(query(collection(db, 'Users')), where('role', '==', 'patient'))
+            .then((snapshot) => {
+                let data = [];
+                snapshot.forEach((doc) => {
+                    let temp = doc.data();
+                    data.push(temp);
+                })
+                resolve(data);
+            })
+            .catch(error => reject(error));
+    })
+}
