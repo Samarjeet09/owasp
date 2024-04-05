@@ -3,8 +3,14 @@ import { signIn, signUp } from '../../Firebase/userAuth';
 import userContext from './userContext.jsx';
 
 export default function UserState(props) {
-    
-    const [user, setUserState] = useState({});
+    const tempUser = {
+        'name': 'Mukul',
+        'role': 'patient',
+        'email': 'mjindal_be21@thapar.edu',
+        'password': 'mukul1234',
+        'id': 102116063,
+    }
+    const [user, setUserState] = useState(tempUser);
 
     const login = (credentials) => {
         const { email, password } = credentials;
