@@ -7,13 +7,14 @@ const Sidebar = ({ isOpen, toggle }) => {
   return (
     <div className={`sidebar ${isOpen ? 'open' : ''}`}>
       <div className="sidebar-header">
-        <h3>Admin Portal</h3>
+        <h3>Guardian Portal</h3>
         <button onClick={toggle}><FaTimes /></button>
       </div>
       <ul className="sidebar-menu">
-        <li><Link to="/approve">Organisation Approval</Link></li>
-        <li><Link to="/resolve">Resolve Feedback</Link></li>
-        <li><Link to="/manageCaretakers">Manage Caretakers</Link></li>
+        <li><Link to="/guardianReports">Reports</Link></li>
+        <li><Link to="/requirements">Requirements</Link></li>
+        <li><Link to="/contactCaretaker">Contact Caretaker</Link></li>
+        <li><Link to="/feedback">Feedback</Link></li>
       </ul>
     </div>
   );

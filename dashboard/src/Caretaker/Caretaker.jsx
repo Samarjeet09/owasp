@@ -1,13 +1,11 @@
 import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
-import Sidebar from '../Sidebar/Sidebar.jsx';
+import Sidebar from '../CaretakerSidebar/Sidebar.jsx';
 import { MdPerson } from 'react-icons/md'
 import './Caretaker.css';
 import Box from '../Box/Box.jsx';
 import { FaUser } from 'react-icons/fa';
 import DataBox from '../DataBox/DataBox.jsx';
-
-
 
 const Caretaker = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,11 +36,9 @@ const Caretaker = () => {
             </div>
           </div>
           <div className="person-info">
-            {/* <MdPerson /> */}
-            <span><b>Gautam Gambhir</b></span>
+            <span><b>Caretaker Name</b></span>
           </div>
           <div className="circle-icon">
-            {/* <MdPerson /> */}
           </div>
         </nav>
 
