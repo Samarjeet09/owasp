@@ -48,11 +48,8 @@ const Caretaker = () => {
         <div className='databox'>
           <PatientsDataBox name={'Patients'} />
           <AppointmentDataBox name={'Appointments'} />
-
         </div>
-
       </div>
-
     </>
   );
 };

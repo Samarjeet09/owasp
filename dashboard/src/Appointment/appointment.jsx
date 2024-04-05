@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
 import './appointment.css'
+import { addAppointment } from '../Firebase/CRUDOperations';
 export default function AppointmentPage() {
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
         email: '',
-        mobileNumber: '',
-        dateOfBirth: '',
+        mobile: '',
+        DOB: '',
         gender: '',
         appointmentDate: '',
-        appointmentTime: '',
         departmentName: '',
-        doctorName: '',
-        query: '',
+        problem: '',
     });
 
     const handleInputChange = (e) => {
@@ -26,18 +25,19 @@ export default function AppointmentPage() {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
+        addAppointment(formData)
+            .then((mess) => { console.log("Added Successfully") })
+            .catch((err) => console.log(err))
         setFormData({
             firstName: '',
             lastName: '',
             email: '',
-            mobileNumber: '',
-            dateOfBirth: '',
+            mobile: '',
+            DOB: '',
             gender: '',
             appointmentDate: '',
-            appointmentTime: '',
             departmentName: '',
-            doctorName: '',
-            query: '',
+            problem: '',
         });
     };
     return (
@@ -45,7 +45,7 @@ export default function AppointmentPage() {
             <div id="landingPageNavbar">
                 <img src="src/assets/logo.png" alt="" />
                 <span>NirogSampada</span>
-            </div> 
+            </div>
             <div className='generalInfo1'>
                 <div className='generalInfoLeft1'>
                     <h1 className='heading1'>
@@ -62,7 +62,6 @@ export default function AppointmentPage() {
                     <div className='characters1'>
                         <span className='characters1'>
                             <div className='characters2'>
-
                             </div>
                         </span>
 
@@ -73,167 +72,163 @@ export default function AppointmentPage() {
             <div className='rehabForm'>
                 <h1 className='heading3'>
                     Rehab Name
-                    
+
                 </h1>
                 <div className='main_form'>
                     <form onSubmit={handleSubmit}>
                         <div className='row'>
-                        <div className='labell'>
-                        <label>
-                            First Name
-                            <br></br>
-                            <input
-                                type="text"
-                                name="firstName"
-                                value={formData.firstName}
-                                onChange={handleInputChange}
-                            />
-                        </label>
-                        </div>
-                        <div className='labell'>
-                        <label>
-                            Last Name:
-                            <br></br>
-                            <input
-                                type="text"
-                                name="lastName"
-                                value={formData.lastName}
-                                onChange={handleInputChange}
-                            />
-                        </label>
-                        </div>
-                        </div>
-                        <div className='row'>
-                        <div className='labell'>
-                        <label>
-                            Email:
-                            <br></br>
-                            <input
-                                type="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleInputChange}
-                            />
-                        </label>
-                        </div>
-                        <div className='labell'>
-                        <label>
-                            Mobile Number:
-                            <br></br>
-                            <input
-                                type="tel"
-                                name="mobileNumber"
-                                value={formData.mobileNumber}
-                                onChange={handleInputChange}
-                            />
-                        </label>
-                        </div>
+                            <div className='labell'>
+                                <label>
+                                    First Name
+                                    <br></br>
+                                    <input
+                                        type="text"
+                                        name="firstName"
+                                        value={formData.firstName}
+                                        onChange={handleInputChange}
+                                    />
+                                </label>
+                            </div>
+                            <div className='labell'>
+                                <label>
+                                    Last Name:
+                                    <br></br>
+                                    <input
+                                        type="text"
+                                        name="lastName"
+                                        value={formData.lastName}
+                                        onChange={handleInputChange}
+                                    />
+                                </label>
+                            </div>
                         </div>
                         <div className='row'>
-                        <div className='labell'>
-                        <label>
-                            Date of Birth:
-                            <br></br>
-                            <input
-                                type="date"
-                                name="dateOfBirth"
-                                value={formData.dateOfBirth}
-                                onChange={handleInputChange}
-                            />
-                        </label>
-                        </div>
-                        <div className='labell'>
-                        <label>
-                            Gender:
-                            <br></br>
-                            <select
-                                name="gender"
-                                value={formData.gender}
-                                onChange={handleInputChange}
-                            >
-                                <option value="">Select</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </label>
-                        </div>
+                            <div className='labell'>
+                                <label>
+                                    Email:
+                                    <br></br>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        value={formData.email}
+                                        onChange={handleInputChange}
+                                    />
+                                </label>
+                            </div>
+                            <div className='labell'>
+                                <label>
+                                    Mobile Number:
+                                    <br></br>
+                                    <input
+                                        type="number"
+                                        name="mobile"
+                                        value={formData.mobile}
+                                        onChange={handleInputChange}
+                                    />
+                                </label>
+                            </div>
                         </div>
                         <div className='row'>
-                        <div className='labell'>
-                        <label>
-                            Appointment Date:
-                            <br></br>
-                            <input
-                                type="date"
-                                name="appointmentDate"
-                                value={formData.appointmentDate}
-                                onChange={handleInputChange}
-                            />
-                        </label>
-                        </div>
-                        <div className='labell'>
-                        <label>
-                            Appointment Time:
-                            <br></br>
-                            <input
-                                type="time"
-                                name="appointmentTime"
-                                value={formData.appointmentTime}
-                                onChange={handleInputChange}
-                            />
-                        </label>
-                        </div>
-                        </div>
-                        <div className='row'>
-                        <div className='labell'>
-                        <label>
-                            Department Name:
-                            <br></br>
-                            <input
-                                type="text"
-                                name="departmentName"
-                                value={formData.departmentName}
-                                onChange={handleInputChange}
-                            />
-                        </label>
-                        </div>
-                        <div className='labell'>
-                        <label>
-                            Doctor Name:
-                            <br></br>
-                            <input
-                                type="text"
-                                name="doctorName"
-                                value={formData.doctorName}
-                                onChange={handleInputChange}
-                            />
-                        </label>
-                        </div>
+                            <div className='labell'>
+                                <label>
+                                    Date of Birth:
+                                    <br></br>
+                                    <input
+                                        type="date"
+                                        name="DOB"
+                                        value={formData.DOB}
+                                        onChange={handleInputChange}
+                                    />
+                                </label>
+                            </div>
+                            <div className='labell'>
+                                <label>
+                                    Gender:
+                                    <br></br>
+                                    <select
+                                        name="gender"
+                                        value={formData.gender}
+                                        onChange={handleInputChange}
+                                    >
+                                        <option value="">Select</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </label>
+                            </div>
                         </div>
                         <div className='row'>
-                        <div className='labell'>
-                        <label>
-                            Query:
-                            <br></br>
-                            <textarea
-                                name="query"
-                                value={formData.query}
-                                onChange={handleInputChange}
-                            ></textarea>
-                        </label>
-                        <div className='bt'>
-                        <button type="submit">Submit</button>
+                            <div className='labell'>
+                                <label>
+                                    Appointment Date:
+                                    <br></br>
+                                    <input
+                                        type="date"
+                                        name="appointmentDate"
+                                        value={formData.appointmentDate}
+                                        onChange={handleInputChange}
+                                    />
+                                </label>
+                            </div>
+                            {/* <div className='labell'>
+                                <label>
+                                    Appointment Time:
+                                    <br></br>
+                                    <input
+                                        type="time"
+                                        name="appointmentTime"
+                                        value={formData.appointmentTime}
+                                        onChange={handleInputChange}
+                                    />
+                                </label>
+                            </div> */}
                         </div>
+                        {/* <div className='row'>
+                            <div className='labell'>
+                                <label>
+                                    Department Name:
+                                    <br></br>
+                                    <input
+                                        type="text"
+                                        name="departmentName"
+                                        value={formData.departmentName}
+                                        onChange={handleInputChange}
+                                    />
+                                </label>
+                            </div>
+                            <div className='labell'>
+                                <label>
+                                    Doctor Name:
+                                    <br></br>
+                                    <input
+                                        type="text"
+                                        name="doctorName"
+                                        value={formData.doctorName}
+                                        onChange={handleInputChange}
+                                    />
+                                </label>
+                            </div>
+                        </div> */}
+                        <div className='row'>
+                            <div className='labell'>
+                                <label>
+                                    Query:
+                                    <br></br>
+                                    <textarea
+                                        name="problem"
+                                        value={formData.problem}
+                                        onChange={handleInputChange}
+                                    ></textarea>
+                                </label>
+                                <div className='bt'>
+                                    <button type="submit">Submit</button>
+                                </div>
+                            </div>
                         </div>
-                        </div>
-                        
-                        
-                        
                     </form>
                 </div>
             </div>
-
         </div>
     )
 }
