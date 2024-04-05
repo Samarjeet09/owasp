@@ -165,3 +165,5 @@ export function getAppointment() {
             .catch(error => reject(error));
     })
 }
+
+// export function patient

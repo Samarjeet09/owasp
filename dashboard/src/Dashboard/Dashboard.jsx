@@ -5,6 +5,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsive
 import { getDetails } from '../Firebase/CRUDOperations';
 import { formatBloodPressure, formatCalorie, formatHeartRate, formatMood, formatSleep, formatWater } from '../Firebase/formatResponse';
 import userContext from '../context/users/userContext';
+import './Dashboard.css';
 
 function Dashboard() {
     const [BloodPressure, setBloodPressure] = useState();

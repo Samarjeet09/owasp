@@ -47,7 +47,6 @@ const Caretaker = () => {
         <div className='databox'>
           <DataBox name={'Patients'} />
           <DataBox name={'Appointments'} />
-
         </div>
 
       </div>

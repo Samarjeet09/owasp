@@ -8,6 +8,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Form,
 } from "react-router-dom";
 import AddUserDetails from './AddUserDetails/AddUserDetails'
 import LandingPage from './LandingPage/LandingPage'
@@ -15,6 +16,8 @@ import Admin from './Admin/Admin'
 import Navbar from './Navbar/Navbar'
 import Caretaker from './Caretaker/Caretaker';
 import Guardian from './Guardian/Guardian';
+
+import Alerts from './Alerts/Alerts'
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
@@ -37,6 +40,9 @@ function App() {
             <Route path='/admin' element={<Admin />}></Route>
             <Route path='/caretaker' element={<Caretaker />}></Route>
             <Route path='/guardian' element={<Guardian />}></Route>
+            <Route path='/guardianReports' element={<Dashboard />}></Route>
+            <Route path='/contactGuardian' element={<Form />}></Route>
+            <Route path='/alerts' element={<Alerts />}></Route>
           </Routes>
         </div>
       </Router>
