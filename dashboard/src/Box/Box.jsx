@@ -2,15 +2,15 @@ import React from 'react';
 import { FaSyringe, FaThermometer, FaHome, FaMedkit, FaUser } from 'react-icons/fa';
 import './Box.css';
 
-const Box = () => {
+const Box = ({text, number}) => {
     return (
         <div className="info-card">
             <div className="info-item">
                 <div className="left"><FaUser /></div>
-                <div className="right">Total Patients</div>
-                <span>20</span>
+                <div className="right">{text}</div>
+                <span>{number}</span>
             </div>
-            <div className="info-item">
+            {/* <div className="info-item">
                 <div className="left"><FaSyringe /></div>
                 <div className="right">Total Doctors</div>
                 <span>20</span>
@@ -24,7 +24,7 @@ const Box = () => {
                 <div className="left"><FaMedkit /></div>
                 <div className="right">Total Caretakers</div>
                 <span>20</span>
-            </div>
+            </div> */}
         </div>
     );
 };

@@ -108,16 +108,18 @@
   }
   
   .box{
-    margin-top: 14vh;
+    /* margin-top: 14vh; */
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 150px;
-    background-color: #f2f2f2;
+    flex-direction: column;
+    /* width: 100%; */
+    /* height: 150px; */
+    /* background-color: red; */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
+    margin: 0;
   }
 
   .databox{
@@ -126,3 +128,21 @@
     align-items: center;
     justify-content: center;
   }
+/* 
+  .info-admin{
+    display: grid;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  } */
+
+  .info-admin {
+    display: grid;
+    grid-template-columns: repeat(2, 0.1fr); /* 2 columns */
+    gap: 25px; /* spacing between boxes */
+    justify-content: center; /* horizontally center the grid */
+    align-items: center; /* vertically center the grid */
+    /* margin: 0px */
+    /* background-color: red; */
+    /* max-width: 80vh; */
+}

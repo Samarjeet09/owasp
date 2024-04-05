@@ -18,7 +18,7 @@ body {
 .container_form {
     max-width: 40vw; /* Maximum width of the container */
     margin: 0 auto; 
-    padding: 10%; 
+    padding: 11%; 
     border: 1px solid #ced4da; /* Light gray border */
     border-radius: 5px; /* Rounded corners */
     background-color: #fff; /* White background */
@@ -75,15 +75,19 @@ body {
 
 /* Margin utility classes */
 .my-2 {
-    margin-top: 10px; /* Top margin */
+    margin-top: 5px; /* Top margin */
     margin-bottom: 10px; /* Bottom margin */
 }
 
 .my-5 {
-    margin-top: 50px; /* Top margin */
-    margin-bottom: 50px; /* Bottom margin */
+    margin-top: 25vh; /* Top margin */
+    margin-bottom: 20vh; /* Bottom margin */
 }
 
 .bp{
+    padding: 2%;
+}
+
+.hr{
     padding: 2%;
 }

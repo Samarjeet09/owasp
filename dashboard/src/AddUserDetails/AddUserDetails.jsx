@@ -58,7 +58,7 @@ export default function AddUserDetails() {
             <div className='container_form my-5 mx-5' >
                 <form className="row g-3" onSubmit={handleSubmit}>
 
-                    <div className="row my-2">
+                    <div className="my-2">
                         <div className="hr">
                             Patient ID
                         </div>
@@ -85,7 +85,7 @@ export default function AddUserDetails() {
 
 
                     <div className='bp'>Blood Pressure</div>
-                    <div className="row my-2">
+                    <div className="my-2">
                         <div className="col">
                             <input
                                 type="number"
@@ -129,7 +129,7 @@ export default function AddUserDetails() {
                             />
                         </div>
                     </div>
-                    <div className="row my-2">
+                    <div className="my-2">
                         <div className="hr">
                             Heart Rate
                         </div>
@@ -152,8 +152,8 @@ export default function AddUserDetails() {
                             />
                         </div>
                     </div>
+                    <div className="my-2">
                     <div>Calories</div>
-                    <div className="row my-2">
                         <div className="col">
                             <input
                                 type="number"
@@ -218,8 +218,8 @@ export default function AddUserDetails() {
                             />
                         </div>
                     </div>
-                    <div>Mood</div>
                     <div className="row my-2">
+                    <div>Mood</div>
                         <div className="col">
                             <input
                                 type="number"

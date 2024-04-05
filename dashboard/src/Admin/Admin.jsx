@@ -18,7 +18,8 @@ const Admin = () => {
 
   return (
     <>
-      <div className="admin">
+
+      <div className='navbar'>
 
         <Sidebar isOpen={isOpen} toggle={toggle} />
 
@@ -39,20 +40,29 @@ const Admin = () => {
           </div>
           <div className="person-info">
             {/* <MdPerson /> */}
-            <span><b>Gautam Gambhir</b></span>
+            <span><b>Admin Name</b></span>
           </div>
           <div className="circle-icon">
             {/* <MdPerson /> */}
           </div>
         </nav>
+      </div>
 
-        <div className='box'><Box /></div>
+      <div className="admin">
 
-        <div className='databox'>
+        <div className='info-admin'>
+          <div className='box'><Box text={'Total Organisations'} number={100} /></div>
+          <div className='box'><Box text={'Total Organisations'} number={100} /></div>
+          <div className='box'><Box text={'Total Organisations'} number={100} /></div>
+          <div className='box'><Box text={'Total Organisations'} number={100} /></div>
+        </div>
+
+
+        {/* <div className='databox'>
           <DataBox name={'Patients'} />
           <DataBox name={'Appointments'} />
 
-        </div>
+        </div> */}
 
       </div>
 

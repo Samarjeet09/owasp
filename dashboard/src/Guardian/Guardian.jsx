@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
-import Sidebar from '../Sidebar/Sidebar.jsx';
+import Sidebar from '../GuardianSidebar/Sidebar.jsx';
 import { MdPerson } from 'react-icons/md'
 import './Guardian.css';
 import Box from '../Box/Box.jsx';
