@@ -1,4 +1,4 @@
-import { setDoc, doc, updateDoc, getDoc, writeBatch, addDoc, collection, getDocs, query, where } from "firebase/firestore";
+import { setDoc, doc, updateDoc, getDoc, writeBatch, addDoc, collection, getDocs, query, where, Timestamp } from "firebase/firestore";
 import { db } from "./initiate.js";
 
 export default function addUser(userInfo) {
@@ -137,7 +137,7 @@ export function getDetails(id, type) {
 export function addAppointment(information) {
     return new Promise((resolve, reject) => {
         addDoc(collection(db, 'Appointments'), {
-            'firstName ': information['firstName'],
+            'firstName': information['firstName'],
             'lastName': information['lastName'],
             'email': information['email'],
             'mobile': information['mobile'],
@@ -158,7 +158,10 @@ export function getAppointment() {
             .then((snapshot) => {
                 let data = [];
                 snapshot.forEach((doc) => {
-                    data.push(doc.data());
+                    let temp = doc.data();
+                    let date = temp['appointmentDate'].toDate();
+                    temp['appointmentDate'] = `${date.getFullYear()}-${(String(date.getMonth() + 1)).padStart(2, '0')}-${(String(date.getDate())).padStart(2, '0')}`
+                    data.push(temp);
                 })
                 resolve(data);
             })
