@@ -1,10 +1,11 @@
 import React, { useContext, useEffect, useState } from 'react'
-import './Dashborad.css'
+// import './Dashborad.css'
 import { BsFillArchiveFill, BsFillGrid3X3GapFill, BsPeopleFill, BsFillBellFill } from 'react-icons/bs'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, LineChart, Line, AreaChart, Area } from 'recharts';
 import { getDetails } from '../Firebase/CRUDOperations';
 import { formatBloodPressure, formatCalorie, formatHeartRate, formatMood, formatSleep, formatWater } from '../Firebase/formatResponse';
 import userContext from '../context/users/userContext';
+import './Dashboard.css';
 
 function Dashboard() {
     const [BloodPressure, setBloodPressure] = useState();

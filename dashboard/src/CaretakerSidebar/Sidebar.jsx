@@ -12,9 +12,10 @@ const Sidebar = ({ isOpen, toggle }) => {
       </div>
       <ul className="sidebar-menu">
         <li><Link to="/alerts">Alerts</Link></li>
-        <li><Link to="/ginbox">Guardian Inbox</Link></li>
-        <li><Link to="/patientOut">Patient Out</Link></li>
-        <li><Link to="/unknownPersonAlert">Unknown Person Alert</Link></li>
+        {/* <li><Link to="/patientOut">Patient Out</Link></li> */}
+        {/* <li><Link to="/unknownPersonAlert">Unknown Person Alert</Link></li> */}
+        <li><Link to="/reports">Upload Reports</Link></li>
+        <li><Link to="/contactGuardian">Contact Guardian</Link></li>
       </ul>
     </div>
   );
