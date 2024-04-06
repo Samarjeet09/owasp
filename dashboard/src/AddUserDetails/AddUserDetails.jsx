@@ -55,8 +55,11 @@ export default function AddUserDetails() {
         <>
             <div className='nav'><Navbar /></div>
             <div className='container_form my-5 mx-5' >
+                <div className='formName'>
+                    <h2>ENTER DAILY REPORTS!</h2>
+                </div>
                 <form className="row g-3" onSubmit={handleSubmit}>
-
+                    {/* <div className="report">Report Form</div> */}
                     <div className="my-2">
                         <div className="hr">
                             Patient ID
@@ -152,7 +155,7 @@ export default function AddUserDetails() {
                         </div>
                     </div>
                     <div className="my-2">
-                    <div>Calories</div>
+                        <div>Calories</div>
                         <div className="col">
                             <input
                                 type="number"
@@ -218,7 +221,7 @@ export default function AddUserDetails() {
                         </div>
                     </div>
                     <div className="row my-2">
-                    <div>Mood</div>
+                        <div>Mood</div>
                         <div className="col">
                             <input
                                 type="number"

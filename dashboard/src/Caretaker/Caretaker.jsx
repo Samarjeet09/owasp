@@ -44,7 +44,7 @@ const Caretaker = () => {
           </div>
         </nav>
 
-        <div className='box'><Box /></div>
+        {/* <div className='box'><Box /></div> */}
 
         <div className='databox'>
           <PatientsDataBox name={'Patients'} />
