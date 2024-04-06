@@ -55,6 +55,9 @@ export default function AddUserDetails() {
         <>
             <div className='nav'><Navbar /></div>
             <div className='container_form my-5 mx-5' >
+                <div className='formName'>
+                    <h2>ENTER DAILY REPORTS!</h2>
+                </div>
                 <form className="row g-3" onSubmit={handleSubmit}>
                     <div className="report">Report Form</div>
                     <div className="my-2">

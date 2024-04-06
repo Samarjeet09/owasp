@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import './appointment.css'
 import { addAppointment } from '../Firebase/CRUDOperations';
+import ScrollButton from './scrollButton';
 export default function AppointmentPage() {
+    
     const [formData, setFormData] = useState({
         firstName: '',
         lastName: '',
@@ -39,6 +41,7 @@ export default function AppointmentPage() {
             departmentName: '',
             problem: '',
         });
+
     };
     return (
         <div className='landingPageBackground'>
@@ -54,9 +57,7 @@ export default function AppointmentPage() {
                     <span className='paragraph1'>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum facilis cumque beatae. Odit labore dolor ab recusandae! Repudiandae libero tempore, rerum laudantium eveniet consequatur hic itaque, animi maiores, expedita vitae.
                     </span>
-                    <div className='fill1'>
-                        Book Now!
-                    </div>
+                    <ScrollButton/>
                 </div>
                 <div className='generalInfoRight1'>
                     <div className='characters1'>
