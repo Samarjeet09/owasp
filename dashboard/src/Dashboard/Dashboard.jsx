@@ -15,7 +15,7 @@ function Dashboard() {
     const [Mood, setMood] = useState();
     const [Water, setWater] = useState();
 
-    const { user, login } = useContext(userContext);
+    const { user } = useContext(userContext);
 
     async function initialData() {
         let id = user['id'];
@@ -39,6 +39,7 @@ function Dashboard() {
         <main className='main-container'>
             <div className='main-title'>
                 <h3>DASHBOARD</h3>
+                <h3>{user['name']} - {user['id']}</h3>
             </div>
 
             <div className='main-cards'>

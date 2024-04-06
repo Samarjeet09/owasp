@@ -19,6 +19,7 @@ import Caretaker from './Caretaker/Caretaker';
 import Guardian from './Guardian/Guardian';
 
 import Alerts from './Alerts/Alerts'
+import Login from './Login/Login';
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
@@ -35,18 +36,23 @@ function App() {
           <Sidebar openSidebarToggle={openSidebarToggle} OpenSidebar={OpenSidebar} /> */}
           <Routes>
             <Route path='/' element={<LandingPage />}> </Route>
-            <Route path='/reports' element={<AddUserDetails/>}></Route>
-            <Route path='/dashboard' element={<Dashboard />}> </Route>
-            <Route path='/addReport' element={<AddUserDetails />}></Route>
+            <Route path='/appointment' element={<AppointmentPage />}></Route>
+            <Route path='/signIn' element={<Login/>}/>
 
-            <Route path='/appointment' element={<AppointmentPage/>}></Route>
+            <Route path='/dashboard' element={<Dashboard />}> </Route>
+
+            <Route path='/caretaker' element={<Caretaker />}></Route>
+            <Route path='/alerts' element={<Alerts />}></Route>
+            <Route path='/reports' element={<AddUserDetails />}></Route>
 
             <Route path='/admin' element={<Admin />}></Route>
-            <Route path='/caretaker' element={<Caretaker />}></Route>
+
             <Route path='/guardian' element={<Guardian />}></Route>
             <Route path='/guardianReports' element={<Dashboard />}></Route>
             <Route path='/contactGuardian' element={<Form />}></Route>
-            <Route path='/alerts' element={<Alerts />}></Route>
+
+
+            {/* <Route path='/addReport' element={<AddUserDetails />}></Route> */}
           </Routes>
         </div>
       </Router>
