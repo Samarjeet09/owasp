@@ -6,8 +6,6 @@ const AppointmentDataBox = ({ name }) => {
 
   const [patientData, setPatientData] = useState([]);
 
-
-
   useEffect(() => {
     const initialFetch = () => {
       getAppointment()
