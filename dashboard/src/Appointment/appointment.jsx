@@ -213,7 +213,7 @@ export default function AppointmentPage() {
                         <div className='row'>
                             <div className='labell'>
                                 <label>
-                                    Query:
+                                    Discription
                                     <br></br>
                                     <textarea
                                         name="problem"
