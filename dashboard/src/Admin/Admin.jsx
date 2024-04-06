@@ -9,7 +9,6 @@ import DataBox from '../DataBox/AppointmentDataBox.jsx';
 import userContext from '../context/users/userContext.jsx';
 
 
-
 const Admin = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user } = useContext(userContext);
@@ -52,10 +51,14 @@ const Admin = () => {
       <div className="admin">
 
         <div className='info-admin'>
+          <div className='rowUp'>
           <div className='box'><Box text={'Total Organisations'} number={100} /></div>
           <div className='box'><Box text={'Total Organisations'} number={100} /></div>
+          </div>
+          <div className='rowDown'>
           <div className='box'><Box text={'Total Organisations'} number={100} /></div>
           <div className='box'><Box text={'Total Organisations'} number={100} /></div>
+          </div>
         </div>
 
 
