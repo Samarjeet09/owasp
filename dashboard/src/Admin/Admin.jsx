@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import Sidebar from '../Sidebar/Sidebar.jsx';
 import { MdPerson } from 'react-icons/md'
 import './Admin.css';
 import Box from '../Box/Box.jsx';
 import { FaUser } from 'react-icons/fa';
-// import DataBox from '../DataBox/DataBox.jsx';
+import DataBox from '../DataBox/AppointmentDataBox.jsx';
+import userContext from '../context/users/userContext.jsx';
+
 
 const Admin = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const { user } = useContext(userContext);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
@@ -28,7 +30,7 @@ const Admin = () => {
             </div>
           </div>
           <div className="patient-info">
-            <span className="patient-name">Rinku Singh</span>
+            <span className="patient-name">{user['name']}</span>
           </div>
           <div className="rehab-info">
             <div className="logoWithName">
@@ -38,7 +40,7 @@ const Admin = () => {
           </div>
           <div className="person-info">
             {/* <MdPerson /> */}
-            <span><b>Admin Name</b></span>
+            <span><b>{user['id']}</b></span>
           </div>
           <div className="circle-icon">
             {/* <MdPerson /> */}
