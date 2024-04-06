@@ -1,10 +1,4 @@
-.info-card {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 20px; /* spacing between cards */
-    justify-content: center; /* horizontally center the grid */
-    align-items: center; /* vertically center the grid */
-}
+
 
 .info-item {
     display: flex;
@@ -16,6 +10,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     height: 138px;
+    width: 500px;
 }
 
 .info-item .left {
