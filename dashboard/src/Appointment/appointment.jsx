@@ -46,8 +46,10 @@ export default function AppointmentPage() {
     return (
         <div className='landingPageBackground'>
             <div id="landingPageNavbar">
-                <img src="src/assets/logo.png" alt="" />
-                <span>NirogSampada</span>
+                <div className='logoWithName'>
+                    <img src="src/assets/logo.png" alt="" />
+                    <span>NirogSampada</span>
+                </div>
             </div>
             <div className='generalInfo1'>
                 <div className='generalInfoLeft1'>
@@ -214,7 +216,7 @@ export default function AppointmentPage() {
                         <div className='row'>
                             <div className='labell'>
                                 <label>
-                                    Query:
+                                    Discription
                                     <br></br>
                                     <textarea
                                         name="problem"
