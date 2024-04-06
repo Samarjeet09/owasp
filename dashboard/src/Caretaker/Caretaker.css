@@ -115,6 +115,7 @@
     width: 100%;
     height: 150px;
     background-color: #f2f2f2;
+    /* background-color: red; */
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
@@ -125,4 +126,5 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    margin-top: 18vh;
   }

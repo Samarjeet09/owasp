@@ -22,7 +22,7 @@
   flex-direction: row;
 }
 
-.generalInfoLeft1 {  
+.generalInfoLeft1 {
   width: 40vw;
   height: 100vh;
   display: flex;
@@ -195,4 +195,22 @@
 .main_form button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
+}
+
+.fill1 {
+  /* Your existing styles for 'fill1' */
+  background-color: blue;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 100px;
+  margin-top: 40px;
+}
+
+.fill1:hover {
+  background-color: darkblue;
+  /* Change color on hover */
 }
