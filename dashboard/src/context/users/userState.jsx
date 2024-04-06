@@ -25,7 +25,7 @@ export default function UserState(props) {
             .catch((error) => console.log(error))
     }
     return (
-        <userContext.Provider value={{ user, login, signUp }}>
+        <userContext.Provider value={{ user, login, signUp, setUserState }}>
             {props.children}
         </userContext.Provider>
     )

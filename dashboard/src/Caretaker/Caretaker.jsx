@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import Sidebar from '../CaretakerSidebar/Sidebar.jsx';
 import { MdPerson } from 'react-icons/md'
@@ -7,10 +7,11 @@ import Box from '../Box/Box.jsx';
 import { FaUser } from 'react-icons/fa';
 import AppointmentDataBox from '../DataBox/AppointmentDataBox.jsx';
 import PatientsDataBox from '../DataBox/PatientsDataBox.jsx';
+import userContext from '../context/users/userContext.jsx';
 
 const Caretaker = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const {user} = useContext(userContext);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
@@ -28,7 +29,7 @@ const Caretaker = () => {
             </div>
           </div>
           <div className="patient-info">
-            <span className="patient-name">Rinku Singh</span>
+            <span className="patient-name">{user['name']}</span>
           </div>
           <div className="rehab-info">
             <div className="logoWithName">
@@ -37,7 +38,7 @@ const Caretaker = () => {
             </div>
           </div>
           <div className="person-info">
-            <span><b>Caretaker Name</b></span>
+            <span><b>{user['id']}</b></span>
           </div>
           <div className="circle-icon">
           </div>

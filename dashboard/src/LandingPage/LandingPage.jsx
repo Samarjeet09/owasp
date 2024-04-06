@@ -2,7 +2,16 @@ import React from 'react'
 import './LandingPage.css'
 import SlideCardComponent from './SlideCardComponent'
 import Footer from './Footer'
+import { useNavigate } from 'react-router';
 export default function LandingPage() {
+
+    let navigation = useNavigate();
+
+    const handleOnClick = (e) => {
+        e.preventDefault();
+        navigation(`/${e.target.value}`)
+    }
+
     return (
         <div className='landingPageBackground'>
             <div id="landingPageNavbar">
@@ -20,12 +29,13 @@ export default function LandingPage() {
                         Lorem Media is a full-service social media agency. We offer businesses innovative solutions that deliver the right type of audience to you in the most effective strategies possible. We strive to develop a community around your business, polishing your branding, and improving your public relations.
                     </span>
                     <div className='authOptions'>
-                        <div className="authButton">
+                        <button className="authButton" value="appointment" onClick={handleOnClick}
+                        >
                             GET STARTED
-                        </div>
-                        <div className="authButton">
+                        </button>
+                        <button className="authButton" value='signIn' onClick={handleOnClick}>
                             ALREADY HAVE AN ACCOUNT?
-                        </div>
+                        </button>
                     </div>
                 </div>
                 <div className="generalInfoRight">

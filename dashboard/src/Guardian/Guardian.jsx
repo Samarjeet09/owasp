@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import Sidebar from '../GuardianSidebar/Sidebar.jsx';
 import { MdPerson } from 'react-icons/md'
@@ -6,12 +6,13 @@ import './Guardian.css';
 import Box from '../Box/Box.jsx';
 import { FaUser } from 'react-icons/fa';
 import DataBox from '../DataBox/AppointmentDataBox.jsx';
+import userContext from '../context/users/userContext.jsx';
 
 
 
 const Guardian = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const {user} = useContext(userContext);
   const toggle = () => {
     setIsOpen(!isOpen);
   };
@@ -29,7 +30,7 @@ const Guardian = () => {
             </div>
           </div>
           <div className="patient-info">
-            <span className="patient-name">Rinku Singh</span>
+            <span className="patient-name">{user['name']}</span>
           </div>
           <div className="rehab-info">
             <div className="logoWithName">
@@ -39,7 +40,7 @@ const Guardian = () => {
           </div>
           <div className="person-info">
             {/* <MdPerson /> */}
-            <span><b>Gautam Gambhir</b></span>
+            <span><b>{user['id']}</b></span>
           </div>
           <div className="circle-icon">
             {/* <MdPerson /> */}
