@@ -47,10 +47,9 @@ const Guardian = () => {
           </div>
         </nav>
 
-        <div className='box'><Box /></div>
+        {/* <div className='box'><Box /></div> */}
 
         <div className='databox'>
-          <DataBox name={'Patients'} />
           <DataBox name={'Appointments'} />
 
         </div>
