@@ -59,7 +59,7 @@ export default function AddUserDetails() {
                     <h2>ENTER DAILY REPORTS!</h2>
                 </div>
                 <form className="row g-3" onSubmit={handleSubmit}>
-                    <div className="report">Report Form</div>
+                    {/* <div className="report">Report Form</div> */}
                     <div className="my-2">
                         <div className="hr">
                             Patient ID
