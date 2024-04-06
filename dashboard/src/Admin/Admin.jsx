@@ -52,12 +52,12 @@ const Admin = () => {
 
         <div className='info-admin'>
           <div className='rowUp'>
-          <div className='box'><Box text={'Total Organisations'} number={100} /></div>
-          <div className='box'><Box text={'Total Organisations'} number={100} /></div>
+          <div className='box'><Box text={'Total Organisations'} number={20} /></div>
+          <div className='box'><Box text={'Pending Organisations'} number={34} /></div>
           </div>
           <div className='rowDown'>
-          <div className='box'><Box text={'Total Organisations'} number={100} /></div>
-          <div className='box'><Box text={'Total Organisations'} number={100} /></div>
+          <div className='box'><Box text={'Feedbacks'} number={37} /></div>
+          <div className='box'><Box text={'Total Caretakers'} number={100} /></div>
           </div>
         </div>
 

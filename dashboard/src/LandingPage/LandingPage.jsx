@@ -73,10 +73,10 @@ export default function LandingPage() {
             <div className="slideCardBox">
                 <h1>Get Rid of</h1>
                 <div className="slideCard">
-                    {<SlideCardComponent image='src/assets/LandingPage/doctorPatient.png' text="addiction" />}
-                    {<SlideCardComponent image='src/assets/LandingPage/doctorPatient.png' text="addiction" />}
-                    {<SlideCardComponent image='src/assets/LandingPage/doctorPatient.png' text="addiction" />}
-                    {<SlideCardComponent image='src/assets/LandingPage/doctorPatient.png' text="addiction" />}
+                    {<SlideCardComponent image='src/assets/LandingPage/drug.png' text="Drug Addiction" />}
+                    {<SlideCardComponent image='src/assets/LandingPage/alcohol.png' text="Alcohol Addiction" />}
+                    {<SlideCardComponent image='src/assets/LandingPage/nicotine.png' text="Nicotine Addiction" />}
+                    {<SlideCardComponent image='src/assets/LandingPage/image.png' text="Addiction" />}
                 </div>
             </div>
             <div className="map">
