@@ -141,9 +141,9 @@ export function addAppointment(information) {
             'lastName': information['lastName'],
             'email': information['email'],
             'mobile': information['mobile'],
-            'DOB': information['DOB'],
+            'DOB': Timestamp.fromDate(new Date(information['DOB'])),
             'gender': information['gender'],
-            'appointmentDate': information['appointmentDate'],
+            'appointmentDate': Timestamp.fromDate(new Date(information['appointmentDate'])),
             'problem': information['problem'],
             'status': "pending"
         })
@@ -176,7 +176,9 @@ export function getAllPatients() {
                 let data = [];
                 snapshot.forEach((doc) => {
                     let temp = doc.data();
-                    data.push(temp);
+                    if (temp['role'] === 'patient') {
+                        data.push(temp);
+                    }
                 })
                 resolve(data);
             })
@@ -192,7 +194,7 @@ function getCurrentDate() {
     // Get the components of the current date and time
     const year = currentDate.getFullYear();
     let month = currentDate.getMonth() + 1; // Months are zero-based
-    let day =   currentDate.getDate();
+    let day = currentDate.getDate();
     // Format the date and time components into a string
     if (month < 10) {
         month = '0' + month;
@@ -212,12 +214,10 @@ export function patientOut() {
             .then((snapshot) => {
                 let data = [];
                 snapshot.forEach((doc) => {
-                    let tempData ={}
+                    let tempData = {}
                     let temp = doc.data()
-                    // console.log(temp['2024-04-06'])
                     tempData['name'] = doc.id
                     tempData['timestamps'] = temp[currentDate];
-                    // let temp = doc.data();
                     data.push(tempData);
                 })
                 resolve(data);
