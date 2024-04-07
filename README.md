@@ -1,38 +1,53 @@
-# 🏥 Rehab SaaS
+# NirogSampada
 
-## Introduction
+Helps in organizing and finding the rehab centres in the nearest proximity. Further to solve the problem of patient elopement, real time face detection is used along with AWS recognition to cater large datasets. The alerts will be sending to caretakers regarding patients in and out timings. To ensure data privacy and security, we stored the critical patient data in blockchain using ethereum and solidify. Moreover, the guardians have no idea regarding the overall well being of the patient through a personalized dashboard which provides daily updates of the users vital.
+## How to run
 
-Welcome to our Patient Care Management System project! This system aims to revolutionize patient care by automating various tasks and improving communication between caretakers and guardians. Let's work together to build a more efficient and effective healthcare solution!
+Clone the project
 
-## Features
+```bash
+  https://github.com/Ctrl-Alt-Win/acehack.git
+```
 
-- [ ] **Automated Face Detection**: Implement advanced face detection for patient monitoring.
-- [ ] **Dynamic Dashboard**: Create dynamic dashboards to visualize caretaker-posted data for each patient.
-- [ ] **Real-time Updates**: Enable caretakers to upload patient updates and requirements, triggering instant notifications to guardians.
-- [ ] **Backend Development**: Build a robust backend system with well-designed APIs and services.
-- [ ] **Frontend Integration**: Develop a sleek and intuitive frontend interface, seamlessly integrated with the backend.
-- [ ] **Future-proofing**: Explore options to migrate to web3 databases or servers for enhanced scalability and performance.
+Go to the project directory
 
-## Getting Started
+```bash
+  cd acehack
+```
 
-Follow these steps to get started with the project:
-1. **Clone the Repository**: `git clone https://github.com/your/repository.git`
-2. **Install Dependencies**: `npm install`
-3. **Run the Application**: `npm start`
+To run frontend
 
-## Contribution Guidelines
+```
+    cd dashboard
+    npm i
+    npm run dev
+```
 
-We welcome contributions from everyone! Here's how you can contribute:
-- Report bugs 🐛
-- Submit feature requests 💡
-- Contribute code 🚀
+To run face detection
 
-Please read our [Contribution Guidelines](CONTRIBUTING.md) before contributing.
+```
+    cd camera_integration/backend
+    python server.py
+```
 
-## Documentation
+To run face detection frontend
 
-For detailed documentation, check out our [Wiki](https://github.com/your/repository/wiki).
+```
+    cd face-detection
+    npm i
+    npm run dev
+```
 
-## License
+Tech-Stack used
 
-This project is licensed under the [MIT License](LICENSE).
+- AWS
+- Node
+- React
+- Firebase
+- Solidity
+- Etherum
+- Metamask
+- OpenCV
+- Amazon Rekognition
+
+
