@@ -74,7 +74,7 @@ export default function AppointmentPage() {
             </div>
             <div className='rehabForm'>
                 <h1 className='heading3'>
-                    Rehab Name
+                    Appointment Form
 
                 </h1>
                 <div className='main_form'>

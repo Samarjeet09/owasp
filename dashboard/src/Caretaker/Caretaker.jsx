@@ -47,8 +47,8 @@ const Caretaker = () => {
         {/* <div className='box'><Box /></div> */}
 
         <div className='databox'>
-          <PatientsDataBox name={'Patients'} />
-          <AppointmentDataBox name={'Appointments'} />
+          <PatientsDataBox name={'PATIENTS'} />
+          <AppointmentDataBox name={'APPOINTMENTS'} />
         </div>
       </div>
     </>

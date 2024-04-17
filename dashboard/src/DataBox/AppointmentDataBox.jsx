@@ -3,7 +3,6 @@ import './AppointmentDataBox.css'
 import { getAppointment } from '../Firebase/CRUDOperations'
 
 const AppointmentDataBox = ({ name }) => {
-
   const [patientData, setPatientData] = useState([]);
 
   useEffect(() => {
@@ -13,7 +12,6 @@ const AppointmentDataBox = ({ name }) => {
           setPatientData(data);
         })
         .catch(error => console.log(error));
-
     }
 
     initialFetch();
@@ -21,32 +19,28 @@ const AppointmentDataBox = ({ name }) => {
 
   return (
     <div className='data-box'>
-      {name}
-      <div className="data">
-        <div className="heading">
-          <div className="fullName">Full Name</div>
-          <div className="date">Date</div>
-          <div className="status">Status</div>
-        </div>
-        <div className="data">
-          {
-            patientData.map((patientData, index) => {
-              return (
-                <div key={index} className='heading'>
-                  <div className="fullName">
-                    {patientData['firstName']} {patientData['lastName']}
-                  </div>
-                  <div className="date">
-                  {patientData['appointmentDate']}
-                </div>
-                  <div className='status'>
-                    {patientData['status']}
-                  </div>
-                </div>
-              )
-            })
-          }
-        </div>
+      <b><u>{name}</u></b>
+      <div className="data-container">
+        <table className="appointment-data">
+          <thead>
+            <tr>
+              <th>Full Name</th>
+              <th>Date</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            {
+              patientData.map((patientData, index) => (
+                <tr key={index}>
+                  <td>{`${patientData['firstName']} ${patientData['lastName']}`}</td>
+                  <td>{patientData['appointmentDate']}</td>
+                  <td>{patientData['status']}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
       </div>
     </div>
   )

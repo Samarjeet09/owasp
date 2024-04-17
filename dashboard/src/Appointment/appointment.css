@@ -177,7 +177,7 @@
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
-  background-color: #333333;
+  background-color: #9083D5;
   cursor: pointer;
   transition: background-color 0.3s ease;
 
@@ -199,7 +199,7 @@
 
 .fill1 {
   /* Your existing styles for 'fill1' */
-  background-color: blue;
+  background-color: #9083D5;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -211,6 +211,6 @@
 }
 
 .fill1:hover {
-  background-color: darkblue;
+  background-color: #6d5fb2;
   /* Change color on hover */
 }

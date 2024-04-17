@@ -13,7 +13,6 @@ const AlertDataBox = ({ name }) => {
                     setPatientData(data);
                 })
                 .catch(error => console.log(error));
-
         }
 
         initialFetch();

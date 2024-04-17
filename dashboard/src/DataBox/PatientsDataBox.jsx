@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { getAllPatients } from '../Firebase/CRUDOperations';
 import './PatientsDataBox.css'
+
+
 export default function PatientsDataBox({ name }) {
 
     const [patients, setPatients] = useState([]);
@@ -18,19 +20,51 @@ export default function PatientsDataBox({ name }) {
 
     return (
         <div className='patientsDataBox'>
-            {name}
-            <ol className="data">
+            <b><u>{name}</u></b>
+            {/* <ol className="data">
                 {
                     patients.map((patientData, index) => {
                         return (
-                            <li key={index}>
-                                {patientData['name']} - {patientData['id']}
-                            </li>
+                            <table key={index} className="patient-data">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>ID</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>{patientData['name']}</td>
+                                        <td>{patientData['id']}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         )
                     })
                 }
-            </ol>
-
+            </ol> */}
+            <div className="patient-data-container">
+                <table className="patient-data">
+                    <thead>
+                        <tr>
+                            <th>NAME</th>
+                            <th>ID</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            patients.map((patientData, index) => {
+                                return (
+                                    <tr key={index}>
+                                        <td>{patientData['name']}</td>
+                                        <td>{patientData['id']}</td>
+                                    </tr>
+                                )
+                            })
+                        }
+                    </tbody>
+                </table>
+            </div>
         </div>
     )
 }

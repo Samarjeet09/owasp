@@ -13,9 +13,11 @@ export default function UserState(props) {
     const [user, setUserState] = useState(tempUser);
 
     const login = (credentials) => {
-        const { email, password } = credentials;
-        signIn(email, password)
-            .then((userDetials) => setUserState(userDetials))
+        const { email, password, role} = credentials;
+        console.log(email, password, role)
+        signIn(email, password, role)
+            // .then((userDetials) => setUserState(userDetials))
+            .then((userDetails) => setUserState(userDetails))
             .catch((error) => console.log(error));
     }
 

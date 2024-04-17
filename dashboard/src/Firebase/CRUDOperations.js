@@ -209,6 +209,7 @@ function getCurrentDate() {
 
 export function patientOut() {
     const currentDate = getCurrentDate();
+    console.log(currentDate)
     return new Promise((resolve, reject) => {
         getDocs(query(collection(db, 'Attendance-Out')))
             .then((snapshot) => {
@@ -216,8 +217,11 @@ export function patientOut() {
                 snapshot.forEach((doc) => {
                     let tempData = {}
                     let temp = doc.data()
+                    // console.log(temp)
+                    // console.log(doc.id)
                     tempData['name'] = doc.id
-                    tempData['timestamps'] = temp[currentDate];
+                    tempData['timestamps'] = temp[currentDate]; 
+                    console.log(tempData)
                     data.push(tempData);
                 })
                 resolve(data);
