@@ -1,6 +1,6 @@
 {
-  "name": "dashboard",
-  "version": "0.0.0",
+  "name": "medicalrecordsproject",
+  "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -14,25 +14,19 @@
     "react-blockies": "^1.4.1",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.22.3",
+    "react-router-dom": "^6.11.0",
     "react-scripts": "^5.0.1",
     "redux": "^4.2.1",
     "redux-devtools-extension": "^2.13.9",
     "redux-thunk": "^2.4.2",
     "reselect": "^4.1.8",
-    "web-vitals": "^2.1.4",
-    "firebase": "^10.10.0",
-    "react-icons": "^5.0.1",
-    "recharts": "^2.12.3"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "vite build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "dev": "vite",
-    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -66,15 +60,6 @@
     "ethers": "^5.4.7",
     "hardhat-gas-reporter": "^1.0.8",
     "solidity-coverage": "^0.8.0",
-    "typechain": "^8.1.0",
-    "@types/react": "^18.2.66",
-    "@types/react-dom": "^18.2.22",
-    "@vitejs/plugin-react": "^4.2.1",
-    "eslint": "^8.57.0",
-    "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.4.6",
-    "vite": "^5.2.0"
+    "typechain": "^8.1.0"
   }
-  
 }
