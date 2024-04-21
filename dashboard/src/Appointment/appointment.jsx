@@ -48,7 +48,7 @@ export default function AppointmentPage() {
             <div id="landingPageNavbar">
                 <div className='logoWithName'>
                     <img src="src/assets/logo.png" alt="" />
-                    <span>Arogya Bharat</span>
+                    <span>NirogSampada</span>
                 </div>
             </div>
             <div className='generalInfo1'>
