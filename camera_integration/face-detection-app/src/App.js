@@ -32,7 +32,6 @@
 
 import React from 'react';
 import axios from 'axios';
-import Webcam from 'react-webcam';
 import ImageUpload from './ImageUpload';
 import './App.css';
 
