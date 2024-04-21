@@ -19,14 +19,16 @@ const AlertDataBox = ({ name }) => {
     }, []);
 
     return (
-        <div className='data-box'>
-            {name}
-            <div className="data">
+        <div className='alert-data-box'>
+            <div className='top-heading'>
+                <b>PATIENT OUT TIMING LIST</b>
+            </div>
+            <div className="alert-data">
                 <div className="heading">
-                    <div className="fullName">Full Name</div>
-                    <div className="date">Time</div>
+                    <div className="fullName"><b>Patient Name</b></div>
+                    <div className="date"><b>Time Patient went out</b></div>
                 </div>
-                <div className="data">
+                <div className="alert-data">
                     {
                         patientData.map((patientData, index) => {
                             return (

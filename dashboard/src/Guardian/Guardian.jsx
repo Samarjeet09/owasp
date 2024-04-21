@@ -34,8 +34,8 @@ const Guardian = () => {
           </div>
           <div className="rehab-info">
             <div className="logoWithName">
-              <img src="src/assets/logo.png" alt="NirogSampada logo" />
-              <span>NirogSampada</span>
+              <img src="src/assets/logo.png" alt="Arogya Bharat logo" />
+              <span>Arogya Bharat</span>
             </div>
           </div>
           <div className="person-info">

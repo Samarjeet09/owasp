@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="footer">
                 <div className="logoName">
                     <img src="src/assets/logo.png" alt="" />
-                    NirogSampada
+                    Arogya Bharat
                 </div>
 
                 <div className="quickLinks">

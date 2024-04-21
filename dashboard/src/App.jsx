@@ -20,9 +20,9 @@ import Alerts from "./Alerts/Alerts";
 import Login from "./Login/Login";
 import SignUp from "./SignUp/SignUp";
 
-
 import { Provider } from "react-redux";
 import PatientRegistrationData from "./PatientRegistrationData/PatientRegistrationData";
+import VideoStream from "./VideoStream/VideoStream";
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false);
 
@@ -54,8 +54,8 @@ function App() {
             <Route path="/guardianReports" element={<Dashboard />}></Route>
             <Route path="/contactGuardian" element={<Form />}></Route>
 
-
             <Route path="/addPatient" element={<PatientRegistration />}></Route>
+            <Route path="/vid" element={<VideoStream />}></Route>
 
             {/* <Route path='/addReport' element={<AddUserDetails />}></Route> */}
           </Routes>

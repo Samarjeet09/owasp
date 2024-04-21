@@ -17,7 +17,7 @@ export default function LandingPage() {
             <div id="landingPageNavbar">
                 <div className='logoWithName'>
                     <img src="src/assets/logo.png" alt="" />
-                    <span>NirogSampada</span>
+                    <span>Arogya Bharat</span>
                 </div>
             </div>
             <div className="generalInfo">
